@@ -32,7 +32,7 @@ export const isOwner = async (
 ) => {
   try {
     const { id } = req.params;
-    console.log(id);
+ 
     const currentUserId = get(req, "identity._id") as string;
     if (!currentUserId) {
       return res.sendStatus(400);
